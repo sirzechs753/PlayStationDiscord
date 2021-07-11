@@ -1,3 +1,8 @@
+# What i Change
+
+- Change all consoles client ids into my own discord apps client ids.
+- Change target PlayStationDiscord-Games into my forked repo so that i can maintain it.
+
 # PlayStationDiscord
 
 [![Actions Status](https://github.com/Tustin/PlayStationDiscord/workflows/PlayStationDiscord%20Deploy/badge.svg)](https://github.com/Tustin/PlayStationDiscord/actions)
