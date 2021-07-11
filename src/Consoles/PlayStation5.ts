@@ -4,7 +4,7 @@ export default class PlayStation5 extends PlayStationConsole
 {
 	public constructor()
 	{
-		super(PlayStationConsoleType.PS5, '772482010878312458');
+		super(PlayStationConsoleType.PS5, '863367330724446229');
 	}
 
 	public get assetName() : string
