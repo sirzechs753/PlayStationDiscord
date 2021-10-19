@@ -1,7 +1,7 @@
 # What i Change
 
 - Change all consoles client ids into my own discord apps client ids.
-- Change target PlayStationDiscord-Games into my forked repo so that i can maintain it.
+- Change target PlayStationDiscord-Games into [my forked repo](https://github.com/sirzechs753/PlayStationDiscord-Games) so that i can maintain it.
 - Fix Signout button not sign you out.
 
 # PlayStationDiscord
