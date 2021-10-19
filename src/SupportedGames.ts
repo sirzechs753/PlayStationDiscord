@@ -39,7 +39,7 @@ class SupportedGames
 		const checksum = this.store.get('etag');
 
 		const headers : any = {
-			'User-Agent': 'PlayStationDiscord (https://github.com/Tustin/PlayStationDiscord)'
+			'User-Agent': 'PlayStationDiscord (https://github.com/sirzechs753/PlayStationDiscord)'
 		};
 
 		if (checksum)

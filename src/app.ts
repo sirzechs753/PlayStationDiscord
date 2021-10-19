@@ -1,10 +1,9 @@
-import { app, BrowserWindow, dialog, ipcMain, nativeImage, shell, Tray, Menu, Notification, MenuItemConstructorOptions, MenuItem, session } from 'electron';
+import { app, BrowserWindow, dialog, ipcMain, nativeImage, shell, Tray, Menu, Notification, session } from 'electron';
 import { IOAuthTokenResponse, } from './Model/AuthenticationModel';
 import { DiscordController } from './DiscordController';
 import {PlayStationConsole, PlayStationConsoleType } from './Consoles/PlayStationConsole';
 import { IDiscordPresenceModel, IDiscordPresenceUpdateOptions } from './Model/DiscordPresenceModel';
 import { autoUpdater } from 'electron-updater';
-import axios from 'axios';
 import PlayStation5 from './Consoles/PlayStation5';
 import PlayStation4 from './Consoles/PlayStation4';
 import PlayStation3 from './Consoles/PlayStation3';
@@ -73,7 +72,7 @@ if (!instanceLock)
 // 	return request;
 // });
 
-app.setAppUserModelId('com.tustin.playstationdiscord');
+app.setAppUserModelId('com.sirzechs753.playstationdiscord');
 
 // Relevant: https://i.imgur.com/7QDkNqx.png
 function showMessageAndDie(message: string, detail?: string) : void
@@ -111,7 +110,7 @@ function spawnLoginWindow() : void
 	});
 
 	loginWindow.loadURL(sonyLoginUrl, {
-		userAgent: 'Mozilla/5.0'
+		userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0'
 	});
 
 	loginWindow.webContents.on('will-redirect', (event, url) => {
@@ -471,6 +470,10 @@ function signoutCleanup()
 	store.clear();
 	refreshAuthTokensLoop = stopTimer(refreshAuthTokensLoop);
 	updateRichPresenceLoop = stopTimer(updateRichPresenceLoop);
+
+	// Sirzechs753 20/10/2021
+	session.defaultSession.clearStorageData();
+
 	mainWindow.close();
 }
 
@@ -574,7 +577,7 @@ ipcMain.on('signout', async () => {
 		icon: logoIcon
 	});
 
-	if (!response)
+	if (!(await response).response)
 	{
 		signoutCleanup();
 	}
@@ -642,7 +645,7 @@ ipcMain.on('update-install', () => {
 });
 
 ipcMain.on('show-notes', () => {
-	shell.openExternal('https://github.com/Tustin/PlayStationDiscord/releases/latest');
+	shell.openExternal('https://github.com/sirzechs753/PlayStationDiscord/releases/latest');
 });
 
 ipcMain.on('mac-download', () => {
