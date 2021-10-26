@@ -6,8 +6,8 @@
 
 # PlayStationDiscord
 
-[![Actions Status](https://github.com/Tustin/PlayStationDiscord/workflows/PlayStationDiscord%20Deploy/badge.svg)](https://github.com/Tustin/PlayStationDiscord/actions)
-![License](https://img.shields.io/github/license/Tustin/PlayStationDiscord.svg?style=flat)
+[![Actions Status](https://github.com/Tustin/PlayStationDiscord/workflows/PlayStationDiscord%20Deploy/badge.svg)](https://github.com/sirzechs753/PlayStationDiscord/actions)
+![License](https://img.shields.io/github/license/sirzechs753/PlayStationDiscord.svg?style=flat)
 
 Discord Rich Presence for PlayStation 4, PlayStation 3, and PlayStation Vita games.
 
@@ -27,7 +27,7 @@ I don't have any Linux builds because there's too many combinations of Linux to 
 
 ## Supported Games
 
-Supported games will have their game icon show while playing it in the Discord Rich Presence window. Due to the way Discord works, these images need to be pre-set as app assets and can't be set programmatically. As a result, you can see which games are currently supported on the [PlayStationDiscord-Games repository](https://github.com/Tustin/PlayStationDiscord-Games).
+Supported games will have their game icon show while playing it in the Discord Rich Presence window. Due to the way Discord works, these images need to be pre-set as app assets and can't be set programmatically. As a result, you can see which games are currently supported on the [PlayStationDiscord-Games repository](https://github.com/sirzechs753/PlayStationDiscord-Games).
 
 The PlayStationDiscord-Games repo has the script used to generate the games supported in PlayStationDiscord. You could also manually add a game you want and open a PR on the PlayStationDiscord-Games repo. The PR will be merged depending on if you added the game properly. There's a possibilty that this process will be streamlined in the future.
 
@@ -35,7 +35,7 @@ The PlayStationDiscord-Games repo has the script used to generate the games supp
 
 PlayStationDiscord is currently built on Electron using TypeScript. Simply follow the steps below to get it up and running:
 
-1. `git clone https://github.com/Tustin/PlayStationDiscord/`
+1. `git clone https://github.com/sirzechs753/PlayStationDiscord/`
 2. `cd` into PlayStationDiscord folder
 3. `npm install` (or `yarn install`)
 4. `npm run start` (or `yarn start`)
